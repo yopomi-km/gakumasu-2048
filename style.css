@@ -132,6 +132,7 @@ h1 {
   padding: 14px;
   border: 1px solid #2c2d33;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 0 0 1px var(--glow);
+  touch-action: none;
 }
 
 .grid {

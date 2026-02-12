@@ -273,6 +273,10 @@ function handleTouchStart(e) {
   const t = e.touches[0];
   touchStart = { x: t.clientX, y: t.clientY };
 }
+function handleTouchMove(e) {
+  if (!touchStart) return;
+  e.preventDefault();
+}
 function handleTouchEnd(e) {
   if (!touchStart) return;
   const t = e.changedTouches[0];
@@ -311,6 +315,7 @@ modeGBtn.addEventListener("click", () => {
 });
 window.addEventListener("keydown", handleKey);
 window.addEventListener("touchstart", handleTouchStart, { passive: true });
+window.addEventListener("touchmove", handleTouchMove, { passive: false });
 window.addEventListener("touchend", handleTouchEnd, { passive: true });
 window.addEventListener("resize", () => {
   layoutReady = false;
