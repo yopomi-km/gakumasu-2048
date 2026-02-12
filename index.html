@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>学マス2048</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <div>
+        <h1>学マス2048</h1>
+        <p class="subtitle">Arrow keys / WASD / swipe</p>
+      </div>
+      <div class="scorebox">
+        <div class="label">SCORE</div>
+        <div id="score" class="value">0</div>
+      </div>
+      <div class="scorebox">
+        <div class="label">BEST</div>
+        <div id="best" class="value">0</div>
+      </div>
+      <div class="mode">
+        <button id="modeK" class="btn btn-toggle active">好印象</button>
+        <button id="modeG" class="btn btn-toggle">やる気</button>
+      </div>
+      <button id="newGame" class="btn">New Game</button>
+    </header>
+
+    <section class="board" aria-label="2048 board">
+      <div id="grid" class="grid"></div>
+      <div id="overlay" class="overlay hidden">
+        <div class="overlay-card">
+          <div id="overlayText" class="overlay-text">Game Over</div>
+          <button id="restart" class="btn">Play Again</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="legend">
+      <div>Move tiles to combine them and reach 2048.</div>
+      <div class="credit">※使用している画像の権利は、株式会社バンダイナムコホールディングスに帰属します。</div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
