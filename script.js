@@ -9,6 +9,7 @@ const newGameBtn = document.getElementById("newGame");
 const restartBtn = document.getElementById("restart");
 const modeKBtn = document.getElementById("modeK");
 const modeGBtn = document.getElementById("modeG");
+const shareBtn = document.getElementById("shareScore");
 
 let tiles = [];
 let gridValues = [];
@@ -286,6 +287,15 @@ function handleTouchEnd(e) {
 
 newGameBtn.addEventListener("click", init);
 restartBtn.addEventListener("click", init);
+shareBtn.addEventListener("click", () => {
+  const modeLabel = imagePrefix === "k" ? "好印象" : "やる気";
+  const text = `学マス2048でスコア ${score} を達成！モード: ${modeLabel} #学マス2048`;
+  const url = "https://yopomi-km.github.io/gakumasu-2048/";
+  const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+    text
+  )}&url=${encodeURIComponent(url)}`;
+  window.open(shareUrl, "_blank", "noopener,noreferrer");
+});
 modeKBtn.addEventListener("click", () => {
   imagePrefix = "k";
   modeKBtn.classList.add("active");

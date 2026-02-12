@@ -87,6 +87,26 @@ h1 {
   filter: brightness(1.05);
 }
 
+.btn-secondary {
+  background: #1f232b;
+  color: var(--text);
+  border: 1px solid #2c2d33;
+  box-shadow: none;
+}
+
+.btn-share {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+}
+
+.share-icon {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
 .mode {
   display: inline-flex;
   gap: 8px;
