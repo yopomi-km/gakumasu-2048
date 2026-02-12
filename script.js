@@ -19,6 +19,7 @@ let moving = false;
 let tileId = 1;
 let layoutReady = false;
 let imagePrefix = "k";
+const imageVersion = "20260212";
 
 const colors = {
   2: "#2a4d8f",
@@ -116,7 +117,7 @@ function render() {
     tileEl.className = "tile";
     if (tile.isNew) tileEl.classList.add("spawn");
     tileEl.textContent = "";
-    tileEl.style.backgroundImage = `url(\"images/${imagePrefix}_${tile.value}.png\")`;
+    tileEl.style.backgroundImage = `url(\"images/${imagePrefix}_${tile.value}.png?v=${imageVersion}\")`;
     tileEl.style.setProperty("--row", tile.prevRow ?? tile.row);
     tileEl.style.setProperty("--col", tile.prevCol ?? tile.col);
     tileLayer.appendChild(tileEl);
