@@ -27,8 +27,7 @@ body {
     linear-gradient(180deg, #0e0f12 0%, #0f1115 100%);
   color: var(--text);
   min-height: 100svh;
-  display: grid;
-  place-items: center;
+  display: block;
   overflow: hidden;
   overscroll-behavior: none;
   touch-action: none;
@@ -38,6 +37,10 @@ body {
   width: min(88vw, 480px);
   display: grid;
   gap: 14px;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  height: fit-content;
 }
 
 .top {

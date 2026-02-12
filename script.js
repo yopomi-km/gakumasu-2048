@@ -314,9 +314,9 @@ modeGBtn.addEventListener("click", () => {
   render();
 });
 window.addEventListener("keydown", handleKey);
-gridEl.addEventListener("touchstart", handleTouchStart, { passive: true });
-gridEl.addEventListener("touchmove", handleTouchMove, { passive: false });
-gridEl.addEventListener("touchend", handleTouchEnd, { passive: true });
+document.addEventListener("touchstart", handleTouchStart, { passive: true });
+document.addEventListener("touchmove", handleTouchMove, { passive: false });
+document.addEventListener("touchend", handleTouchEnd, { passive: true });
 window.addEventListener("resize", () => {
   layoutReady = false;
   syncGridMetrics();
